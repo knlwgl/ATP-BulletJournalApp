@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Scene fx:id="main" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <root>
+        <AnchorPane prefHeight="723.0" prefWidth="1360.0">
+            <children>
+                <VBox layoutY="-1.0" prefHeight="720.0" prefWidth="1360.0">
+                    <children>
+                        <MenuBar prefWidth="792.0">
+                            <menus>
+                                <Menu mnemonicParsing="false" text="Bullet Journal">
+                                    <items>
+                                        <MenuItem fx:id="menuSettings" mnemonicParsing="false" text="Preferences" />
+                                    </items>
+                                </Menu>
+                                <Menu mnemonicParsing="false" text="File">
+                                    <items>
+                                        <Menu fx:id="fileNew" mnemonicParsing="false" text="New">
+                                            <items>
+                                                <MenuItem fx:id="fileTask" mnemonicParsing="false" text="Task" />
+                                                <MenuItem fx:id="fileEvent" mnemonicParsing="false" text="Event" />
+                                    <MenuItem fx:id="fileWeek" mnemonicParsing="false" text="Week" />
+                                            </items>
+                                        </Menu>
+                                        <MenuItem fx:id="fileOpen" mnemonicParsing="false" text="Open..." />
+                                        <MenuItem fx:id="fileSave" mnemonicParsing="false" text="Save" />
+                              <MenuItem fx:id="fileClear" mnemonicParsing="false" text="Clear task search" />
+                                    </items>
+                                </Menu>
+                            </menus>
+                        </MenuBar>
+                        <HBox prefHeight="693.0" prefWidth="1322.0" style="-fx-background-color: #ABABCD;">
+                            <children>
+                                <VBox prefHeight="693.0" prefWidth="142.0" style="-fx-background-color: fefae0;">
+                                    <children>
+                                        <VBox alignment="TOP_CENTER" style="-fx-background-color: d4a373;">
+                                            <children>
+                                                <Label alignment="CENTER" prefHeight="88.0" prefWidth="142.0" style="-fx-background-color: d4a373;" text="Task Queue" textAlignment="CENTER" wrapText="true">
+                                                    <font>
+                                                        <Font name="Courier New" size="20.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="searchBar" prefHeight="23.0" prefWidth="122.0" promptText="Search...">
+                                                    <font>
+                                                        <Font name="Courier New" size="12.0" />
+                                                    </font>
+                                                    <VBox.margin>
+                                                        <Insets bottom="5.0" left="5.0" right="5.0" />
+                                                    </VBox.margin>
+                                                </TextField>
+                                            </children>
+                                        </VBox>
+                                        <Separator prefWidth="200.0" />
+                                        <ScrollPane prefHeight="630.0" prefWidth="147.0" style="-fx-background-color: tan;">
+                                            <content>
+                                                <VBox fx:id="taskQueue" prefHeight="600.0" prefWidth="140.0" style="-fx-background-color: faedcd;" />
+                                            </content></ScrollPane>
+                                    </children>
+                                </VBox>
+                                <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="693.0" prefWidth="30.0" style="-fx-background-color: fefae0;">
+                                    <children>
+                                        <Region prefHeight="33.0" prefWidth="30.0" style="-fx-background-color: fefae0;" />
+                                        <Region layoutX="10.0" layoutY="10.0" prefHeight="37.0" prefWidth="30.0" style="-fx-background-color: fefae0;" />
+                                        <Region layoutX="10.0" layoutY="46.0" prefHeight="79.0" prefWidth="30.0" />
+                                        <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="84.0" rotate="-90.0" text="TASKS" textAlignment="CENTER">
+                                            <font>
+                                                <Font name="Courier New" size="24.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets left="-27.0" />
+                                            </VBox.margin>
+                                        </Label>
+                                        <Region layoutX="10.0" layoutY="10.0" prefHeight="275.0" prefWidth="30.0" />
+                                        <Label layoutX="-17.0" layoutY="164.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="92.0" rotate="-90.0" text="EVENTS" textAlignment="CENTER">
+                                            <font>
+                                                <Font name="Courier New" size="24.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets left="-32.0" />
+                                            </VBox.margin>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox>
+                                    <children>
+                                        <HBox alignment="TOP_RIGHT" prefHeight="33.0" prefWidth="1176.0" style="-fx-background-color: #fefae0;">
+                                            <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <HBox fx:id="eventOverview" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                                            <children>
+                                                                <Label text="EVENTS: ">
+                                                                    <font>
+                                                                        <Font name="Courier New" size="16.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                        </HBox>
+                                                        <HBox fx:id="taskOverview" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                                            <children>
+                                                                <Label text="TASKS: ">
+                                                                    <font>
+                                                                        <Font name="Courier New" size="16.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                        </HBox>
+                                                    </children>
+                                                </HBox>
+                                                <MenuButton fx:id="addNew" mnemonicParsing="false" prefHeight="33.0" prefWidth="43.0" style="-fx-background-radius: 15;" text="+">
+                                                    <items>
+                                                        <MenuItem fx:id="task" mnemonicParsing="false" text="New Task" />
+                                                        <MenuItem fx:id="event" mnemonicParsing="false" text="New Event" />
+                                                    </items>
+                                       <font>
+                                          <Font name="Courier New Bold" size="14.0" />
+                                       </font>
+                                                </MenuButton>
+                                                <Region prefHeight="26.0" prefWidth="10.0" />
+                                                <Button fx:id="quickSave" mnemonicParsing="false" prefHeight="35.0" prefWidth="45.0" style="-fx-background-radius: 15;" text="Save">
+                                       <font>
+                                          <Font name="Courier New Bold" size="12.0" />
+                                       </font></Button>
+                                                <Region prefHeight="26.0" prefWidth="10.0" />
+                                                <Button fx:id="settings" mnemonicParsing="false" prefHeight="33.0" prefWidth="33.0" style="-fx-background-radius: 10;" text="⚙">
+                                                    <font>
+                                                        <Font size="30.0" />
+                                                    </font>
+                                                    <padding>
+                                                        <Insets bottom="-7.0" top="-10.0" />
+                                                    </padding>
+                                                </Button>
+                                            </children>
+                                        </HBox>
+                                        <HBox prefHeight="660.0" prefWidth="1186.0" style="-fx-background-color: #fefae0;">
+                                            <children>
+                                                <VBox prefHeight="660.0" prefWidth="169.0" style="-fx-background-color: fefae0;">
+                                                    <children>
+                                                        <Label alignment="CENTER" prefHeight="37.0" prefWidth="167.0" style="-fx-background-color: ccd5ae; -fx-background-radius: 15 15 0 0;" text="SUNDAY">
+                                                            <font>
+                                                                <Font name="Courier New" size="24.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Separator prefWidth="97.0" />
+                                                        <ScrollPane prefHeight="198.0" prefWidth="100.0">
+                                                            <content>
+                                                                <VBox fx:id="sundayTasks" prefHeight="196.0" prefWidth="167.0" style="-fx-background-color: e9edc9;" />
+                                                            </content>
+                                                        </ScrollPane>
+                                                        <Separator prefWidth="97.0" />
+                                                        <ScrollPane layoutX="10.0" layoutY="50.0" prefHeight="415.0" prefWidth="168.0">
+                                                            <content>
+                                                                <VBox fx:id="sundayEvents" prefHeight="413.0" prefWidth="167.0" style="-fx-background-color: e9edc9;" />
+                                                            </content>
+                                                        </ScrollPane>
+                                                    </children>
+                                                </VBox>
+                                                <VBox layoutX="10.0" layoutY="10.0" prefHeight="660.0" prefWidth="169.0" style="-fx-background-color: fefae0;">
+                                                    <children>
+                                                        <Label alignment="CENTER" prefHeight="37.0" prefWidth="167.0" style="-fx-background-color: ccd5ae; -fx-background-radius: 15 15 0 0;" text="MONDAY">
+                                                            <font>
+                                                                <Font name="Courier New" size="24.0" />
+                                                            </font></Label>
+                                                        <Separator prefWidth="97.0" />
+                                                        <ScrollPane prefHeight="198.0" prefWidth="100.0">
+                                                            <content>
+                                                                <VBox fx:id="mondayTasks" prefHeight="196.0" prefWidth="167.0" style="-fx-background-color: e9edc9;" />
+                                                            </content></ScrollPane>
+                                                        <Separator prefWidth="97.0" />
+                                                        <ScrollPane prefHeight="415.0" prefWidth="168.0">
+                                                            <content>
+                                                                <VBox fx:id="mondayEvents" prefHeight="413.0" prefWidth="167.0" style="-fx-background-color: e9edc9;" />
+                                                            </content></ScrollPane>
+                                                    </children>
+                                                </VBox>
+                                                <VBox layoutX="110.0" layoutY="10.0" prefHeight="660.0" prefWidth="169.0" style="-fx-background-color: fefae0;">
+                                                    <children>
+                                                        <Label alignment="CENTER" prefHeight="37.0" prefWidth="167.0" style="-fx-background-color: ccd5ae; -fx-background-radius: 15 15 0 0;" text="TUESDAY">
+                                                            <font>
+                                                                <Font name="Courier New" size="24.0" />
+                                                            </font></Label>
+                                                        <Separator prefWidth="97.0" />
+                                                        <ScrollPane prefHeight="198.0" prefWidth="100.0">
+                                                            <content>
+                                                                <VBox fx:id="tuesdayTasks" prefHeight="196.0" prefWidth="167.0" style="-fx-background-color: e9edc9;" />
+                                                            </content></ScrollPane>
+                                                        <Separator prefWidth="97.0" />
+                                                        <ScrollPane prefHeight="415.0" prefWidth="100.0">
+                                                            <content>
+                                                                <VBox fx:id="tuesdayEvents" prefHeight="413.0" prefWidth="167.0" style="-fx-background-color: e9edc9;" />
+                                                            </content></ScrollPane>
+                                                    </children>
+                                                </VBox>
+                                                <VBox layoutX="210.0" layoutY="10.0" prefHeight="660.0" prefWidth="169.0" style="-fx-background-color: fefae0;">
+                                                    <children>
+                                                        <Label alignment="CENTER" prefHeight="37.0" prefWidth="167.0" style="-fx-background-color: ccd5ae; -fx-background-radius: 15 15 0 0;" text="WEDNESDAY">
+                                                            <font>
+                                                                <Font name="Courier New" size="24.0" />
+                                                            </font></Label>
+                                                        <VBox prefHeight="620.0" prefWidth="94.0">
+                                                            <children>
+                                                                <Separator prefWidth="97.0" />
+                                                                <ScrollPane prefHeight="198.0" prefWidth="94.0">
+                                                                    <content>
+                                                                        <VBox fx:id="wednesdayTasks" prefHeight="196.0" prefWidth="167.0" style="-fx-background-color: e9edc9;" />
+                                                                    </content></ScrollPane>
+                                                                <Separator prefWidth="97.0" />
+                                                                <ScrollPane prefHeight="415.0" prefWidth="94.0">
+                                                                    <content>
+                                                                        <VBox fx:id="wednesdayEvents" prefHeight="413.0" prefWidth="167.0" style="-fx-background-color: e9edc9;" />
+                                                                    </content></ScrollPane>
+                                                            </children>
+                                                        </VBox>
+                                                    </children>
+                                                </VBox>
+                                                <VBox layoutX="310.0" layoutY="10.0" prefHeight="660.0" prefWidth="169.0" style="-fx-background-color: fefae0;">
+                                                    <children>
+                                                        <Label alignment="CENTER" prefHeight="37.0" prefWidth="167.0" style="-fx-background-color: ccd5ae; -fx-background-radius: 15 15 0 0;" text="THURSDAY">
+                                                            <font>
+                                                                <Font name="Courier New" size="24.0" />
+                                                            </font></Label>
+                                                        <Separator prefWidth="97.0" />
+                                                        <ScrollPane prefHeight="198.0" prefWidth="100.0">
+                                                            <content>
+                                                                <VBox fx:id="thursdayTasks" prefHeight="196.0" prefWidth="167.0" style="-fx-background-color: e9edc9;" />
+                                                            </content></ScrollPane>
+                                                        <Separator prefWidth="97.0" />
+                                                        <ScrollPane prefHeight="415.0" prefWidth="100.0">
+                                                            <content>
+                                                                <VBox fx:id="thursdayEvents" prefHeight="413.0" prefWidth="167.0" style="-fx-background-color: e9edc9;" />
+                                                            </content></ScrollPane>
+                                                    </children>
+                                                </VBox>
+                                                <VBox layoutX="410.0" layoutY="10.0" prefHeight="660.0" prefWidth="169.0" style="-fx-background-color: fefae0;">
+                                                    <children>
+                                                        <Label alignment="CENTER" prefHeight="37.0" prefWidth="167.0" style="-fx-background-color: ccd5ae; -fx-background-radius: 15 15 0 0;" text="FRIDAY">
+                                                            <font>
+                                                                <Font name="Courier New" size="24.0" />
+                                                            </font></Label>
+                                                        <Separator prefWidth="97.0" />
+                                                        <VBox prefHeight="616.0" prefWidth="100.0">
+                                                            <children>
+                                                                <ScrollPane prefHeight="198.0" prefWidth="100.0">
+                                                                    <content>
+                                                                        <VBox fx:id="fridayTasks" prefHeight="196.0" prefWidth="167.0" style="-fx-background-color: e9edc9;" />
+                                                                    </content></ScrollPane>
+                                                                <Separator prefWidth="97.0" />
+                                                                <ScrollPane prefHeight="415.0" prefWidth="100.0">
+                                                                    <content>
+                                                                        <VBox fx:id="fridayEvents" prefHeight="413.0" prefWidth="167.0" style="-fx-background-color: e9edc9;" />
+                                                                    </content></ScrollPane>
+                                                            </children>
+                                                        </VBox>
+                                                    </children>
+                                                </VBox>
+                                                <VBox layoutX="468.0" layoutY="10.0" prefHeight="660.0" prefWidth="169.0" style="-fx-background-color: fefae0;">
+                                                    <children>
+                                                        <Label alignment="CENTER" prefHeight="37.0" prefWidth="167.0" style="-fx-background-color: ccd5ae; -fx-background-radius: 15 15 0 0;" text="SATURDAY">
+                                                            <font>
+                                                                <Font name="Courier New" size="24.0" />
+                                                            </font></Label>
+                                                        <Separator prefWidth="97.0" />
+                                                        <VBox prefHeight="616.0" prefWidth="91.0">
+                                                            <children>
+                                                                <ScrollPane prefHeight="198.0" prefWidth="91.0">
+                                                                    <content>
+                                                                        <VBox fx:id="saturdayTasks" prefHeight="196.0" prefWidth="167.0" style="-fx-background-color: e9edc9;" />
+                                                                    </content></ScrollPane>
+                                                                <Separator prefWidth="97.0" />
+                                                                <ScrollPane prefHeight="415.0" prefWidth="167.0">
+                                                                    <content>
+                                                                        <VBox fx:id="saturdayEvents" prefHeight="413.0" prefWidth="167.0" style="-fx-background-color: e9edc9;" />
+                                                                    </content></ScrollPane>
+                                                            </children>
+                                                        </VBox>
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </root>
+</Scene>

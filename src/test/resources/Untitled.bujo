@@ -1,0 +1,110 @@
+{
+  "maxTasks" : 1,
+  "maxEvents" : 1,
+  "tasks" : {
+    "THURSDAY" : [ ],
+    "FRIDAY" : [ ],
+    "SATURDAY" : [ ],
+    "WEDNESDAY" : [ {
+      "name" : "PA05",
+      "description" : "yee haw",
+      "day" : "WEDNESDAY",
+      "isCompleted" : false
+    } ],
+    "TUESDAY" : [ ],
+    "SUNDAY" : [ ],
+    "MONDAY" : [ {
+      "name" : "asldkas",
+      "description" : "adsads",
+      "day" : "MONDAY",
+      "isCompleted" : true
+    } ]
+  },
+  "events" : {
+    "THURSDAY" : [ ],
+    "FRIDAY" : [ {
+      "name" : "multiline desc test",
+      "description" : "sa.kdhasd\nhaa ha a\nlmao what",
+      "day" : "FRIDAY",
+      "startTime" : {
+        "hour" : 10,
+        "minute" : 25,
+        "zone" : "PM"
+      },
+      "duration" : 1
+    } ],
+    "SATURDAY" : [ ],
+    "WEDNESDAY" : [ ],
+    "TUESDAY" : [ {
+      "name" : "wooohooo",
+      "description" : "Test test test 1 2 3",
+      "day" : "TUESDAY",
+      "startTime" : {
+        "hour" : 4,
+        "minute" : 20,
+        "zone" : "PM"
+      },
+      "duration" : 69
+    }, {
+      "name" : "yeehaw",
+      "description" : "234",
+      "day" : "TUESDAY",
+      "startTime" : {
+        "hour" : 3,
+        "minute" : 33,
+        "zone" : "AM"
+      },
+      "duration" : 1
+    } ],
+    "SUNDAY" : [ ],
+    "MONDAY" : [ ]
+  },
+  "allEvents" : [ {
+    "name" : "multiline desc test",
+    "description" : "sa.kdhasd\nhaa ha a\nlmao what",
+    "day" : "FRIDAY",
+    "startTime" : {
+      "hour" : 10,
+      "minute" : 25,
+      "zone" : "PM"
+    },
+    "duration" : 1
+  }, {
+    "name" : "wooohooo",
+    "description" : "Test test test 1 2 3",
+    "day" : "TUESDAY",
+    "startTime" : {
+      "hour" : 4,
+      "minute" : 20,
+      "zone" : "PM"
+    },
+    "duration" : 69
+  }, {
+    "name" : "yeehaw",
+    "description" : "234",
+    "day" : "TUESDAY",
+    "startTime" : {
+      "hour" : 3,
+      "minute" : 33,
+      "zone" : "AM"
+    },
+    "duration" : 1
+  } ],
+  "allTasks" : [ {
+    "name" : "PA05",
+    "description" : "yee haw",
+    "day" : "WEDNESDAY",
+    "isCompleted" : false
+  }, {
+    "name" : "asldkas",
+    "description" : "adsads",
+    "day" : "MONDAY",
+    "isCompleted" : true
+  } ],
+  "completedTasks" : [ {
+    "name" : "asldkas",
+    "description" : "adsads",
+    "day" : "MONDAY",
+    "isCompleted" : true
+  } ]
+}
