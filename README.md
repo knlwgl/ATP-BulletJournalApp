@@ -1,7 +1,7 @@
 Uses MVC design pattern and JavaFX
 
 Project Instructions:\
-[Link](https://markefontenot.notion.site/PA-05-8263d28a81a7473d8372c6579abd6481) (Group project with GitHub users Jozurf and gcooper407)
+[Link](https://markefontenot.notion.site/PA05-Java-Journal-8057462e72994ec0a4c0a8a07cd3a463) (Group project with GitHub users Jozurf and gcooper407)
 
 ## Week View GUI
 
